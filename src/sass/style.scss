@@ -146,9 +146,10 @@
         font-weight: 600;
         &:focus {
             outline: none;
+            box-shadow: 0 0 15px 0 rgb(0 0 0 / 30%);
         }
         &:hover {
-            box-shadow: 0 7px 35px 0 rgb(0 0 0 / 30%);
+            box-shadow: 0 0 15px 0 rgb(0 0 0 / 30%);
         }
         &-inner {
             display: inline-block;
