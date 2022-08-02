@@ -1,0 +1,237 @@
+@import 'animations';
+
+.numbers {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #4db8ec;
+    max-width: 632px;
+    height: 478px;
+    font-size: 16px;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    overflow: hidden;
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 632px;
+        height: 32px;
+        min-width: 288px;
+        padding: 0 16px;
+        background-color: hsla(0,0%,100%,.4);
+        color: #333;
+        z-index: 9999;
+        &-item {
+            text-align: center;
+            &-text {
+                font-size: 7px;
+                font-weight: 600;
+            }
+            &-index {
+                font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+                font-weight: 900;
+                font-size: 12px;
+                font-feature-settings: "tnum";
+                font-variant-numeric: tabular-nums;
+            }
+        }
+    }
+    &__result {
+        display: none;
+        width: 400px;
+        height: 300px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        animation: come-in .3s ease-out;
+        animation-fill-mode: forwards;
+        &-title {
+            font-size: 30px;
+        }
+        &-score {
+            font-size: 50px;
+        }
+        &-button {
+            margin-top: 20px;
+            font-size: 20px;
+            background: white;
+            border: 0;
+            padding: 10px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &__task {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 1.5em 1.2em;
+        border-radius: 3px;
+        color: #fff;
+        height: 102px;
+        box-shadow: 0 7px 35px 0 rgb(0 0 0 / 30%);
+        width: 485px;
+        margin: 60px auto 30px;
+        &-text {
+            font-size: 1.15em;
+            font-weight: 600;
+        }
+        &-reference {
+            font-weight: 600;
+            font-size: 3.15em;
+            line-height: 1; 
+            position: absolute;
+            top: 24px;
+            right: 20px;
+            font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            &--ng-enter {
+                animation: come-in .3s ease-out;
+                animation-fill-mode: forwards;
+            }
+            &--ng-leave {
+                animation: go-out .3s ease-in;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    &__items {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 485px;
+        margin: 0 auto;
+        &--ng-enter {
+            animation: come-in .3s ease-out;
+            animation-fill-mode: forwards;
+        }
+        &--ng-leave {
+            animation: go-out .3s ease-in;
+            animation-fill-mode: forwards;
+        }
+    }
+    &__text {
+        align-self: center;
+        width: 200px;
+        padding-bottom: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+    }
+    &__item {
+        margin: 5px;
+        width: 30%;
+        line-height: 80px;
+        font-size: 40px;
+        position: relative;
+        padding: 0;
+        border: none;
+        outline: none;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-weight: 600;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            box-shadow: 0 7px 35px 0 rgb(0 0 0 / 30%);
+        }
+        &-inner {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+        }
+        &--orange {
+            background: #f28e37;
+        }
+        &--pink {
+            background: #fc73b0;
+        }
+        &--purple {
+            background: #8e3dcb;
+        }
+        &--green {
+            background: #94c94d;
+        }
+        &--blue {
+            background: #4db8ec;;
+        }
+        &--disable {
+            opacity: .5;    
+        }
+        &--size-1 {
+            width: 30%;
+            line-height: 80px;
+            font-size: 40px;
+        }
+        &--size-2 {
+            width: 22.5%;
+            line-height: 60px;
+            font-size: 30px;
+        }
+        &--size-3 {
+            width: 22.5%;
+            line-height: 50px;
+            font-size: 24px;
+        }
+        &--size-4 {
+            width: 18%;
+            line-height: 40px;
+            font-size: 18px;
+            margin: 4px;
+        }
+        &--blink {
+            animation: blink .4s ease-in infinite alternate;
+            animation-delay: .4s;
+        }
+        &--rotate {
+            > span {
+                animation: rotate .6s linear infinite;
+                animation-delay: .4s;
+            }
+        }
+        &--scale {
+            animation: scale .4s ease-in infinite alternate;
+            animation-delay: .4s;
+        }
+    }
+    &__arm {
+        width: 96px;
+        height: 103px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-20px);
+        z-index: 1;
+        background: url(../icons/arm.svg) no-repeat;
+    }
+    &__answer{
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-20px);
+        z-index: 1;
+        &--correct {
+            background: url(../icons/correct.png) no-repeat;
+        }
+        &--wrong {
+            background: url(../icons/wrong.png) no-repeat;
+        }
+    }
+}
