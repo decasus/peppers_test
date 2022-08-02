@@ -30,7 +30,7 @@ function startGame() {
     gameLevel.textContent = level;
     gameTutorial.style.display = 'none';
     resultScore.style.display = 'none';
-    gameField.onclick = 'null';
+    gameField.onclick = null;
 
     // Запускаем таймер
 
