@@ -27,20 +27,20 @@
         background-color: hsla(0,0%,100%,.4);
         color: #333;
         z-index: 9999;
-        &-item {
-            text-align: center;
-            &-text {
-                font-size: 7px;
-                font-weight: 600;
-            }
-            &-index {
-                font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-                font-weight: 900;
-                font-size: 12px;
-                font-feature-settings: "tnum";
-                font-variant-numeric: tabular-nums;
-            }
-        }
+    }
+    &__menu-item {
+        text-align: center;
+    }
+    &__menu-item-text {
+        font-size: 7px;
+        font-weight: 600;
+    }
+    &__menu-item-index {
+        font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-weight: 900;
+        font-size: 12px;
+        font-feature-settings: "tnum";
+        font-variant-numeric: tabular-nums;
     }
     &__result {
         display: none;
@@ -53,22 +53,22 @@
         font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
         animation: come-in .3s ease-out;
         animation-fill-mode: forwards;
-        &-title {
-            font-size: 30px;
-        }
-        &-score {
-            font-size: 50px;
-        }
-        &-button {
-            margin-top: 20px;
-            font-size: 20px;
-            background: white;
-            border: 0;
-            padding: 10px;
-            &:focus {
-                outline: none;
-            }
-        }
+    }
+    &__result-title {
+        font-size: 30px;
+    }
+    &__result-score {
+        font-size: 50px;
+    }
+    &__result-button {
+        margin-top: 20px;
+        font-size: 20px;
+        background: white;
+        border: 0;
+        padding: 10px;
+        &:focus {
+            outline: none;
+        }  
     }
     &__task {
         display: flex;
@@ -82,26 +82,26 @@
         box-shadow: 0 7px 35px 0 rgb(0 0 0 / 30%);
         width: 485px;
         margin: 60px auto 30px;
-        &-text {
-            font-size: 1.15em;
-            font-weight: 600;
+    }
+    &__task-text {
+        font-size: 1.15em;
+        font-weight: 600;
+    }
+    &__task-reference {
+        font-weight: 600;
+        font-size: 3.15em;
+        line-height: 1; 
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        &--ng-enter {
+            animation: come-in .3s ease-out;
+            animation-fill-mode: forwards;
         }
-        &-reference {
-            font-weight: 600;
-            font-size: 3.15em;
-            line-height: 1; 
-            position: absolute;
-            top: 24px;
-            right: 20px;
-            font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-            &--ng-enter {
-                animation: come-in .3s ease-out;
-                animation-fill-mode: forwards;
-            }
-            &--ng-leave {
-                animation: go-out .3s ease-in;
-                animation-fill-mode: forwards;
-            }
+        &--ng-leave {
+            animation: go-out .3s ease-in;
+            animation-fill-mode: forwards;
         }
     }
     &__items {
@@ -150,12 +150,6 @@
         }
         &:hover {
             box-shadow: 0 0 15px 0 rgb(0 0 0 / 30%);
-        }
-        &-inner {
-            display: inline-block;
-            vertical-align: middle;
-            width: 100%;
-            height: 100%;
         }
         &--orange {
             background: #f28e37;
@@ -210,6 +204,12 @@
             animation: scale .4s ease-in infinite alternate;
             animation-delay: .4s;
         }
+    }
+    &__item-inner {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
     }
     &__arm {
         width: 96px;
